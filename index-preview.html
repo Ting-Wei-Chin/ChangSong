@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="香頌日和｜台北大安區精品住宅，六張犁捷運600公尺，頂級學區，輕奢歐洲鄉村風格" />
+  <title>香頌日和 CHANSON SOLEIL｜台北大安精品住宅</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+TC:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F0EDE6',
+            sage: '#7C9B6E',
+            gold: '#B8935A',
+            darkbrown: '#2D2926',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { scroll-behavior: smooth; }
+    body { font-family: 'Noto Sans TC', sans-serif; color: #2D2926; background: #FAFAF8; }
+    .font-serif { font-family: 'Playfair Display', 'Noto Serif TC', serif !important; }
+
+    @keyframes sway {
+      0%, 100% { transform: rotate(-4deg); }
+      50% { transform: rotate(4deg); }
+    }
+    .sway { animation: sway 7s ease-in-out infinite; transform-origin: bottom center; }
+    .sway-r { animation: sway 8s ease-in-out infinite reverse; transform-origin: top center; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.9s ease forwards; }
+    .fade-up-d1 { animation: fadeUp 0.9s 0.2s ease forwards; opacity: 0; }
+    .fade-up-d2 { animation: fadeUp 0.9s 0.4s ease forwards; opacity: 0; }
+    .fade-up-d3 { animation: fadeUp 0.9s 0.6s ease forwards; opacity: 0; }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #F0EDE6; }
+    ::-webkit-scrollbar-thumb { background: #7C9B6E; border-radius: 3px; }
+
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+
+    .nav-link { position: relative; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#7C9B6E; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ NAVBAR -->
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-[#E8E0D5]">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#">
+      <h1 class="font-serif text-xl text-[#2D2926] tracking-[0.2em]">香頌日和</h1>
+      <p style="font-size:10px; letter-spacing:0.35em;" class="text-[#B8935A] uppercase">Chanson Soleil</p>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#features" class="nav-link text-sm text-[#5A5248] hover:text-[#7C9B6E] transition-colors tracking-wide">專案亮點</a>
+      <a href="#units"    class="nav-link text-sm text-[#5A5248] hover:text-[#7C9B6E] transition-colors tracking-wide">精選戶型</a>
+      <a href="#location" class="nav-link text-sm text-[#5A5248] hover:text-[#7C9B6E] transition-colors tracking-wide">地理位置</a>
+      <a href="#contact"  class="nav-link text-sm text-[#5A5248] hover:text-[#7C9B6E] transition-colors tracking-wide">聯絡我們</a>
+      <a href="https://line.me/R/ti/p/@798aqusu" target="_blank"
+         class="flex items-center gap-2 px-5 py-2.5 bg-[#7C9B6E] text-white text-sm rounded-full hover:bg-[#6B8A5D] transition-all hover:shadow-md tracking-wide">
+        💬 LINE 諮詢
+      </a>
+    </div>
+    <!-- Mobile hamburger -->
+    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="#2D2926" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-[#E8E0D5] px-6 py-4 space-y-3">
+    <a href="#features" class="block text-sm text-[#5A5248] py-2">專案亮點</a>
+    <a href="#units"    class="block text-sm text-[#5A5248] py-2">精選戶型</a>
+    <a href="#location" class="block text-sm text-[#5A5248] py-2">地理位置</a>
+    <a href="#contact"  class="block text-sm text-[#5A5248] py-2">聯絡我們</a>
+    <a href="https://line.me/R/ti/p/@798aqusu" target="_blank"
+       class="block text-center py-3 bg-[#06C755] text-white rounded-full text-sm mt-2">💬 LINE: @798aqusu</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════ HERO -->
+<section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+         style="background: linear-gradient(160deg, #FAFAF8 0%, #F0EDE6 45%, #EAF0E5 100%)">
+
+  <!-- Botanical left -->
+  <div class="absolute left-0 bottom-0 text-[#7C9B6E] opacity-[0.12] sway pointer-events-none" style="transform-origin:bottom left">
+    <svg width="220" height="360" viewBox="0 0 120 160" fill="none">
+      <line x1="60" y1="160" x2="60" y2="20" stroke="currentColor" stroke-width="1.5" opacity=".7"/>
+      <path d="M60 120 C45 105 30 100 20 90" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+      <path d="M20 90 C12 78 6 76 3 66" stroke="currentColor" stroke-width=".9" opacity=".4"/>
+      <ellipse cx="3" cy="64" rx="9" ry="14" fill="currentColor" opacity=".45" transform="rotate(-20 3 64)"/>
+      <ellipse cx="18" cy="88" rx="10" ry="15" fill="currentColor" opacity=".4" transform="rotate(-30 18 88)"/>
+      <path d="M60 90 C76 75 92 70 102 60" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+      <ellipse cx="104" cy="58" rx="9" ry="13" fill="currentColor" opacity=".4" transform="rotate(20 104 58)"/>
+      <path d="M60 58 C50 43 42 36 38 24" stroke="currentColor" stroke-width="1" opacity=".4"/>
+      <ellipse cx="37" cy="21" rx="8" ry="12" fill="currentColor" opacity=".4" transform="rotate(-15 37 21)"/>
+      <path d="M60 52 C72 40 80 33 84 22" stroke="currentColor" stroke-width="1" opacity=".4"/>
+      <ellipse cx="85" cy="20" rx="8" ry="11" fill="currentColor" opacity=".4" transform="rotate(15 85 20)"/>
+    </svg>
+  </div>
+
+  <!-- Botanical right -->
+  <div class="absolute right-0 top-16 text-[#7C9B6E] opacity-[0.12] sway-r pointer-events-none" style="transform:scaleX(-1); transform-origin:top right">
+    <svg width="180" height="300" viewBox="0 0 120 160" fill="none">
+      <line x1="60" y1="160" x2="60" y2="20" stroke="currentColor" stroke-width="1.5" opacity=".7"/>
+      <path d="M60 130 C45 115 32 110 22 98" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+      <ellipse cx="20" cy="96" rx="10" ry="14" fill="currentColor" opacity=".4" transform="rotate(-25 20 96)"/>
+      <path d="M60 100 C74 88 86 82 96 72" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+      <ellipse cx="98" cy="70" rx="9" ry="13" fill="currentColor" opacity=".4" transform="rotate(22 98 70)"/>
+      <path d="M60 65 C50 50 43 43 40 30" stroke="currentColor" stroke-width="1" opacity=".4"/>
+      <ellipse cx="39" cy="27" rx="8" ry="12" fill="currentColor" opacity=".4" transform="rotate(-12 39 27)"/>
+    </svg>
+  </div>
+
+  <div class="text-center px-6 relative z-10 max-w-3xl mx-auto">
+    <div class="flex items-center justify-center gap-4 mb-6 fade-up">
+      <div class="h-px w-12 bg-[#B8935A]"></div>
+      <span style="font-size:10px; letter-spacing:0.5em;" class="text-[#B8935A] uppercase">Taipei · Da'an District</span>
+      <div class="h-px w-12 bg-[#B8935A]"></div>
+    </div>
+
+    <h1 class="font-serif text-6xl md:text-8xl text-[#2D2926] mb-3 fade-up-d1" style="letter-spacing:0.15em; line-height:1.1">香頌日和</h1>
+    <p class="text-[#B8935A] tracking-[0.5em] uppercase mb-8 font-light text-sm md:text-base fade-up-d1">Chanson Soleil</p>
+
+    <div class="flex items-center justify-center gap-3 mb-8 fade-up-d2">
+      <div class="h-px w-8 bg-[#C5B9AD]"></div>
+      <svg class="w-4 h-6 text-[#7C9B6E]" viewBox="0 0 80 120" fill="none">
+        <path d="M40 115 C40 115 5 75 15 35 C22 10 40 5 40 5 C40 5 58 10 65 35 C75 75 40 115 40 115Z" fill="currentColor" opacity=".5"/>
+        <line x1="40" y1="115" x2="40" y2="5" stroke="currentColor" stroke-width="1.2" opacity=".7"/>
+      </svg>
+      <div class="h-px w-8 bg-[#C5B9AD]"></div>
+    </div>
+
+    <p class="text-base md:text-lg text-[#5A5248] mb-3 leading-relaxed font-light fade-up-d2">大安區精品住宅・七層全新完工</p>
+    <p class="text-sm text-[#8A8078] mb-10 leading-relaxed fade-up-d2">六張犁捷運 600 公尺・頂級學區・輕奢歐洲鄉村風格</p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 fade-up-d3">
+      <a href="#contact"
+         class="px-10 py-4 bg-[#7C9B6E] text-white rounded-full hover:bg-[#6B8A5D] transition-all hover:shadow-lg text-sm tracking-[0.15em]">預約看房</a>
+      <a href="#units"
+         class="px-10 py-4 border border-[#2D2926] text-[#2D2926] rounded-full hover:bg-[#2D2926] hover:text-white transition-all text-sm tracking-[0.15em]">瀏覽戶型</a>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="flex justify-center gap-8 md:gap-16 pt-10 border-t border-[#E8E0D5] fade-up-d3">
+      <div class="text-center">
+        <p class="font-serif text-3xl text-[#B8935A]">7</p>
+        <p class="text-xs text-[#8A8078] mt-1 tracking-wider">樓層</p>
+      </div>
+      <div class="text-center">
+        <p class="font-serif text-3xl text-[#B8935A]">3</p>
+        <p class="text-xs text-[#8A8078] mt-1 tracking-wider">房型</p>
+      </div>
+      <div class="text-center">
+        <p class="font-serif text-3xl text-[#B8935A]">600m</p>
+        <p class="text-xs text-[#8A8078] mt-1 tracking-wider">至捷運</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ FEATURES -->
+<section id="features" class="py-20 md:py-28 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p style="font-size:10px; letter-spacing:0.4em;" class="text-[#B8935A] uppercase mb-3">Why Choose Us</p>
+      <h2 class="font-serif text-3xl md:text-4xl text-[#2D2926]">生活機能・一應俱全</h2>
+      <div class="flex items-center justify-center gap-3 mt-4">
+        <div class="h-px w-8 bg-[#C5B9AD]"></div>
+        <svg class="w-3 h-5 text-[#7C9B6E]" viewBox="0 0 80 120" fill="none">
+          <path d="M40 115 C40 115 5 75 15 35 C22 10 40 5 40 5 C40 5 58 10 65 35 C75 75 40 115 40 115Z" fill="currentColor" opacity=".5"/>
+          <line x1="40" y1="115" x2="40" y2="5" stroke="currentColor" stroke-width="1.5" opacity=".7"/>
+        </svg>
+        <div class="h-px w-8 bg-[#C5B9AD]"></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-hover p-7 rounded-2xl border border-[#E8E0D5] hover:border-[#7C9B6E] text-center group">
+        <div class="text-4xl mb-3">🚇</div>
+        <h3 class="font-serif text-[#2D2926] text-lg mb-1 group-hover:text-[#7C9B6E] transition-colors">捷運六張犁</h3>
+        <p style="font-size:11px; letter-spacing:0.1em;" class="text-[#B8935A] mb-3">步行 8 分鐘</p>
+        <p class="text-xs text-[#8A8078] leading-relaxed">距六張犁捷運站僅 600 公尺，往來台北各地輕鬆便利，通勤無壓力。</p>
+      </div>
+      <div class="card-hover p-7 rounded-2xl border border-[#E8E0D5] hover:border-[#7C9B6E] text-center group">
+        <div class="text-4xl mb-3">🏫</div>
+        <h3 class="font-serif text-[#2D2926] text-lg mb-1 group-hover:text-[#7C9B6E] transition-colors">頂級學區三校</h3>
+        <p style="font-size:11px; letter-spacing:0.1em;" class="text-[#B8935A] mb-3">大安・芳和・和平</p>
+        <p class="text-xs text-[#8A8078] leading-relaxed">大安國小、芳和國中、和平完全中學，三大優質學校步行可達，家庭首選。</p>
+      </div>
+      <div class="card-hover p-7 rounded-2xl border border-[#E8E0D5] hover:border-[#7C9B6E] text-center group">
+        <div class="text-4xl mb-3">🏥</div>
+        <h3 class="font-serif text-[#2D2926] text-lg mb-1 group-hover:text-[#7C9B6E] transition-colors">北醫醫療資源</h3>
+        <p style="font-size:11px; letter-spacing:0.1em;" class="text-[#B8935A] mb-3">1.6 公里</p>
+        <p class="text-xs text-[#8A8078] leading-relaxed">台北醫學院附設醫院近在咫尺，完善醫療照護讓生活更安心，銀髮族首選。</p>
+      </div>
+      <div class="card-hover p-7 rounded-2xl border border-[#E8E0D5] hover:border-[#7C9B6E] text-center group">
+        <div class="text-4xl mb-3">🌿</div>
+        <h3 class="font-serif text-[#2D2926] text-lg mb-1 group-hover:text-[#7C9B6E] transition-colors">輕奢歐洲風格</h3>
+        <p style="font-size:11px; letter-spacing:0.1em;" class="text-[#B8935A] mb-3">精品住宅</p>
+        <p class="text-xs text-[#8A8078] leading-relaxed">白色基底搭配綠植點綴，歐洲鄉村輕奢設計，每個細節都是生活美學。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ UNITS -->
+<section id="units" class="py-20 md:py-28" style="background:#F5F1EA">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p style="font-size:10px; letter-spacing:0.4em;" class="text-[#B8935A] uppercase mb-3">Floor Plans</p>
+      <h2 class="font-serif text-3xl md:text-4xl text-[#2D2926]">精選戶型</h2>
+      <div class="flex items-center justify-center gap-3 mt-4">
+        <div class="h-px w-8 bg-[#C5B9AD]"></div>
+        <svg class="w-3 h-5 text-[#7C9B6E]" viewBox="0 0 80 120" fill="none">
+          <path d="M40 115 C40 115 5 75 15 35 C22 10 40 5 40 5 C40 5 58 10 65 35 C75 75 40 115 40 115Z" fill="currentColor" opacity=".5"/>
+          <line x1="40" y1="115" x2="40" y2="5" stroke="currentColor" stroke-width="1.5" opacity=".7"/>
+        </svg>
+        <div class="h-px w-8 bg-[#C5B9AD]"></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- 一房 -->
+      <div class="card-hover rounded-2xl overflow-hidden bg-white border border-[#E8E0D5]">
+        <div class="h-52 flex flex-col items-center justify-center relative" style="background:linear-gradient(135deg,#EAF0E5,#F0EDE6)">
+          <p class="font-serif text-6xl text-[#7C9B6E] opacity-20">一</p>
+          <p class="text-xs text-[#B8935A] mt-2 tracking-wider">平面圖即將公開</p>
+        </div>
+        <div class="p-6">
+          <div class="flex items-end justify-between mb-1">
+            <h3 class="font-serif text-2xl text-[#2D2926]">一房</h3>
+            <span class="text-sm text-[#B8935A]">約 20 坪</span>
+          </div>
+          <p class="text-xs text-[#8A8078] mb-3">單身貴族・首購族</p>
+          <p class="text-xs text-[#5A5248] leading-relaxed mb-4">精心規劃的單人住宅，空間運用極致，適合獨立生活的都市新貴。</p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="px-2.5 py-1 bg-[#EAF0E5] text-[#7C9B6E] text-xs rounded-full">首購首選</span>
+            <span class="px-2.5 py-1 bg-[#EAF0E5] text-[#7C9B6E] text-xs rounded-full">低總價</span>
+          </div>
+          <div class="border-t border-[#E8E0D5] pt-4 flex items-center justify-between">
+            <span class="text-sm text-[#B8935A] font-medium">歡迎洽詢</span>
+            <a href="#contact" class="text-xs text-[#7C9B6E] hover:underline">了解更多 →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 二房 (highlighted) -->
+      <div class="card-hover rounded-2xl overflow-hidden bg-white ring-2 ring-[#7C9B6E] shadow-lg">
+        <div class="bg-[#7C9B6E] text-white text-center text-xs py-1.5 tracking-wider">✦ 最受歡迎</div>
+        <div class="h-52 flex flex-col items-center justify-center relative" style="background:linear-gradient(135deg,#EAF0E5,#F0EDE6)">
+          <p class="font-serif text-6xl text-[#7C9B6E] opacity-20">二</p>
+          <p class="text-xs text-[#B8935A] mt-2 tracking-wider">平面圖即將公開</p>
+        </div>
+        <div class="p-6">
+          <div class="flex items-end justify-between mb-1">
+            <h3 class="font-serif text-2xl text-[#2D2926]">二房</h3>
+            <span class="text-sm text-[#B8935A]">約 20 坪</span>
+          </div>
+          <p class="text-xs text-[#8A8078] mb-3">小家庭・雙薪夫妻</p>
+          <p class="text-xs text-[#5A5248] leading-relaxed mb-4">兩房格局溫馨實用，滿足小家庭的生活需求，位置絕佳交通便利。</p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="px-2.5 py-1 bg-[#EAF0E5] text-[#7C9B6E] text-xs rounded-full">空間精緻</span>
+            <span class="px-2.5 py-1 bg-[#EAF0E5] text-[#7C9B6E] text-xs rounded-full">近捷運</span>
+          </div>
+          <div class="border-t border-[#E8E0D5] pt-4 flex items-center justify-between">
+            <span class="text-sm text-[#B8935A] font-medium">歡迎洽詢</span>
+            <a href="#contact" class="text-xs text-[#7C9B6E] hover:underline">了解更多 →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 三房 -->
+      <div class="card-hover rounded-2xl overflow-hidden bg-white border border-[#E8E0D5]">
+        <div class="h-52 flex flex-col items-center justify-center relative" style="background:linear-gradient(135deg,#EAF0E5,#F0EDE6)">
+          <p class="font-serif text-6xl text-[#7C9B6E] opacity-20">三</p>
+          <p class="text-xs text-[#B8935A] mt-2 tracking-wider">平面圖即將公開</p>
+        </div>
+        <div class="p-6">
+          <div class="flex items-end justify-between mb-1">
+            <h3 class="font-serif text-2xl text-[#2D2926]">三房</h3>
+            <span class="text-sm text-[#B8935A]">約 45 坪</span>
+          </div>
+          <p class="text-xs text-[#8A8078] mb-3">換屋族・三代同堂</p>
+          <p class="text-xs text-[#5A5248] leading-relaxed mb-4">寬敞三房格局，坐擁大安頂級學區，是家庭換屋升級的最佳選擇。</p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="px-2.5 py-1 bg-[#EAF0E5] text-[#7C9B6E] text-xs rounded-full">大坪數</span>
+            <span class="px-2.5 py-1 bg-[#EAF0E5] text-[#7C9B6E] text-xs rounded-full">學區首選</span>
+          </div>
+          <div class="border-t border-[#E8E0D5] pt-4 flex items-center justify-between">
+            <span class="text-sm text-[#B8935A] font-medium">歡迎洽詢</span>
+            <a href="#contact" class="text-xs text-[#7C9B6E] hover:underline">了解更多 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-xs text-[#8A8078] mt-8">* 坪數為約略值，實際以合約為準。平面圖即將公開，歡迎加入 LINE 提前取得資訊。</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ LOCATION -->
+<section id="location" class="py-20 md:py-28 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p style="font-size:10px; letter-spacing:0.4em;" class="text-[#B8935A] uppercase mb-3">Location</p>
+      <h2 class="font-serif text-3xl md:text-4xl text-[#2D2926]">黃金地段・大安核心</h2>
+      <div class="flex items-center justify-center gap-3 mt-4">
+        <div class="h-px w-8 bg-[#C5B9AD]"></div>
+        <svg class="w-3 h-5 text-[#7C9B6E]" viewBox="0 0 80 120" fill="none">
+          <path d="M40 115 C40 115 5 75 15 35 C22 10 40 5 40 5 C40 5 58 10 65 35 C75 75 40 115 40 115Z" fill="currentColor" opacity=".5"/>
+          <line x1="40" y1="115" x2="40" y2="5" stroke="currentColor" stroke-width="1.5" opacity=".7"/>
+        </svg>
+        <div class="h-px w-8 bg-[#C5B9AD]"></div>
+      </div>
+      <p class="text-sm text-[#8A8078] mt-5">台北市大安區臥龍街 151 巷 62-2 & 62-4 號</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <!-- Map -->
+      <div class="rounded-2xl overflow-hidden shadow-md h-80 lg:h-96">
+        <iframe title="香頌日和地圖" width="100%" height="100%" loading="lazy"
+                src="https://www.google.com/maps?q=台北市大安區臥龍街151巷62&output=embed"
+                class="border-0 w-full h-full"></iframe>
+      </div>
+      <!-- Distance list -->
+      <div>
+        <h3 class="font-serif text-[#2D2926] text-xl mb-5">周邊生活機能</h3>
+        <div class="space-y-3">
+          <div class="flex items-center gap-4 p-4 rounded-xl border border-[#E8E0D5] hover:border-[#7C9B6E] hover:bg-[#F5FAF3] transition-all">
+            <span class="text-2xl">🚇</span>
+            <div class="flex-1"><p class="text-sm font-medium text-[#2D2926]">六張犁捷運站</p><p class="text-xs text-[#8A8078]">步行約 8 分鐘</p></div>
+            <span class="text-sm font-semibold text-[#7C9B6E]">600m</span>
+          </div>
+          <div class="flex items-center gap-4 p-4 rounded-xl border border-[#E8E0D5] hover:border-[#7C9B6E] hover:bg-[#F5FAF3] transition-all">
+            <span class="text-2xl">🏫</span>
+            <div class="flex-1"><p class="text-sm font-medium text-[#2D2926]">大安國小</p><p class="text-xs text-[#8A8078]">步行可達</p></div>
+            <span class="text-sm font-semibold text-[#7C9B6E]">近</span>
+          </div>
+          <div class="flex items-center gap-4 p-4 rounded-xl border border-[#E8E0D5] hover:border-[#7C9B6E] hover:bg-[#F5FAF3] transition-all">
+            <span class="text-2xl">🏫</span>
+            <div class="flex-1"><p class="text-sm font-medium text-[#2D2926]">芳和國中</p><p class="text-xs text-[#8A8078]">步行可達</p></div>
+            <span class="text-sm font-semibold text-[#7C9B6E]">近</span>
+          </div>
+          <div class="flex items-center gap-4 p-4 rounded-xl border border-[#E8E0D5] hover:border-[#7C9B6E] hover:bg-[#F5FAF3] transition-all">
+            <span class="text-2xl">🏫</span>
+            <div class="flex-1"><p class="text-sm font-medium text-[#2D2926]">和平完全中學</p><p class="text-xs text-[#8A8078]">步行可達</p></div>
+            <span class="text-sm font-semibold text-[#7C9B6E]">近</span>
+          </div>
+          <div class="flex items-center gap-4 p-4 rounded-xl border border-[#E8E0D5] hover:border-[#7C9B6E] hover:bg-[#F5FAF3] transition-all">
+            <span class="text-2xl">🏥</span>
+            <div class="flex-1"><p class="text-sm font-medium text-[#2D2926]">台北醫學院附設醫院</p><p class="text-xs text-[#8A8078]">摩托車約 5 分鐘</p></div>
+            <span class="text-sm font-semibold text-[#7C9B6E]">1.6km</span>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=台北市大安區臥龍街151巷62" target="_blank"
+           class="block text-center mt-4 py-3 border border-[#7C9B6E] text-[#7C9B6E] rounded-full text-sm hover:bg-[#7C9B6E] hover:text-white transition-all tracking-wide">
+          在 Google Maps 開啟
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ OFFER -->
+<section class="py-20 relative overflow-hidden" style="background:linear-gradient(135deg,#2D2926 0%,#3A3330 50%,#2D2926 100%)">
+  <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+    <p style="font-size:10px; letter-spacing:0.5em;" class="text-[#B8935A] uppercase mb-4">Limited Offer</p>
+    <h2 class="font-serif text-3xl md:text-4xl text-white mb-4">即將完工・限量釋出</h2>
+    <div class="flex items-center justify-center gap-3 mb-6">
+      <div class="h-px w-8 bg-[#B8935A]"></div>
+      <svg class="w-3 h-5 text-[#B8935A]" viewBox="0 0 80 120" fill="none">
+        <path d="M40 115 C40 115 5 75 15 35 C22 10 40 5 40 5 C40 5 58 10 65 35 C75 75 40 115 40 115Z" fill="currentColor" opacity=".6"/>
+        <line x1="40" y1="115" x2="40" y2="5" stroke="currentColor" stroke-width="1.5" opacity=".8"/>
+      </svg>
+      <div class="h-px w-8 bg-[#B8935A]"></div>
+    </div>
+    <p class="text-[#C5B9AD] mb-3 leading-relaxed text-sm md:text-base">香頌日和七層精品公寓即將完工，<br/>現在是入主大安區的最佳時機。</p>
+    <p class="text-[#8A8078] text-xs mb-10 tracking-wide">✦ 限量名額・售完為止 ✦</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contact" class="px-10 py-4 bg-[#B8935A] text-white rounded-full hover:bg-[#A07840] transition-all hover:shadow-lg text-sm tracking-wider">立即詢問</a>
+      <a href="https://line.me/R/ti/p/@798aqusu" target="_blank"
+         class="px-10 py-4 border border-white/30 text-white rounded-full hover:border-white transition-all text-sm tracking-wider">LINE 直接聯繫</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ CONTACT -->
+<section id="contact" class="py-20 md:py-28" style="background:#F5F1EA">
+  <div class="max-w-xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p style="font-size:10px; letter-spacing:0.4em;" class="text-[#B8935A] uppercase mb-3">Contact Us</p>
+      <h2 class="font-serif text-3xl md:text-4xl text-[#2D2926]">預約看房</h2>
+      <div class="flex items-center justify-center gap-3 mt-4">
+        <div class="h-px w-8 bg-[#C5B9AD]"></div>
+        <svg class="w-3 h-5 text-[#7C9B6E]" viewBox="0 0 80 120" fill="none">
+          <path d="M40 115 C40 115 5 75 15 35 C22 10 40 5 40 5 C40 5 58 10 65 35 C75 75 40 115 40 115Z" fill="currentColor" opacity=".5"/>
+          <line x1="40" y1="115" x2="40" y2="5" stroke="currentColor" stroke-width="1.5" opacity=".7"/>
+        </svg>
+        <div class="h-px w-8 bg-[#C5B9AD]"></div>
+      </div>
+      <p class="text-sm text-[#8A8078] mt-4">留下資料，我們將盡快與您聯繫</p>
+    </div>
+
+    <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm">
+      <form id="contact-form" onsubmit="handleSubmit(event)" class="space-y-5">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs text-[#8A8078] mb-1.5 tracking-wider uppercase">姓名 *</label>
+            <input type="text" id="f-name" required placeholder="您的姓名"
+                   class="w-full px-4 py-3 border border-[#E8E0D5] rounded-xl text-sm focus:outline-none focus:border-[#7C9B6E] transition-colors bg-[#FAFAF8]" />
+          </div>
+          <div>
+            <label class="block text-xs text-[#8A8078] mb-1.5 tracking-wider uppercase">電話 *</label>
+            <input type="tel" id="f-phone" required placeholder="聯絡電話"
+                   class="w-full px-4 py-3 border border-[#E8E0D5] rounded-xl text-sm focus:outline-none focus:border-[#7C9B6E] transition-colors bg-[#FAFAF8]" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs text-[#8A8078] mb-1.5 tracking-wider uppercase">有興趣的戶型</label>
+          <select id="f-unit" class="w-full px-4 py-3 border border-[#E8E0D5] rounded-xl text-sm focus:outline-none focus:border-[#7C9B6E] transition-colors bg-[#FAFAF8]">
+            <option value="">請選擇（可略）</option>
+            <option value="一房">一房｜約 20 坪</option>
+            <option value="二房">二房｜約 20 坪</option>
+            <option value="三房">三房｜約 45 坪</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs text-[#8A8078] mb-1.5 tracking-wider uppercase">留言</label>
+          <textarea id="f-msg" rows="3" placeholder="有任何問題或特殊需求，歡迎告訴我們..."
+                    class="w-full px-4 py-3 border border-[#E8E0D5] rounded-xl text-sm focus:outline-none focus:border-[#7C9B6E] transition-colors bg-[#FAFAF8] resize-none"></textarea>
+        </div>
+        <button type="submit"
+                class="w-full py-4 bg-[#7C9B6E] text-white rounded-xl hover:bg-[#6B8A5D] transition-all hover:shadow-md text-sm tracking-wider font-medium">
+          送出預約申請
+        </button>
+      </form>
+
+      <div id="success-msg" class="hidden text-center py-8">
+        <div class="text-5xl mb-3">🌿</div>
+        <h3 class="font-serif text-xl text-[#2D2926] mb-2">感謝您的詢問！</h3>
+        <p class="text-sm text-[#8A8078] mb-5">我們的顧問將透過 LINE 盡快與您聯繫</p>
+        <a href="https://line.me/R/ti/p/@798aqusu" target="_blank"
+           class="inline-block px-8 py-3 bg-[#06C755] text-white rounded-full text-sm">加入 LINE 繼續諮詢</a>
+      </div>
+
+      <div class="mt-6 pt-6 border-t border-[#E8E0D5]">
+        <p class="text-center text-xs text-[#8A8078] mb-3">或直接透過 LINE 即時諮詢</p>
+        <a href="https://line.me/R/ti/p/@798aqusu" target="_blank"
+           class="flex items-center justify-center gap-2 w-full py-3.5 bg-[#06C755] text-white rounded-xl hover:bg-[#05A847] transition-colors text-sm">
+          💬 LINE 諮詢：@798aqusu
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ FOOTER -->
+<footer class="py-12 bg-[#2D2926]">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left">
+        <h3 class="font-serif text-xl text-white tracking-[0.2em] mb-1">香頌日和</h3>
+        <p style="font-size:10px; letter-spacing:0.4em;" class="text-[#B8935A] uppercase mb-3">Chanson Soleil</p>
+        <p class="text-xs text-[#8A8078]">台北市大安區臥龍街 151 巷 62-2 & 62-4 號</p>
+      </div>
+      <div class="text-center md:text-right">
+        <a href="https://line.me/R/ti/p/@798aqusu" target="_blank"
+           class="inline-flex items-center gap-2 px-6 py-3 bg-[#06C755] text-white rounded-full text-sm hover:bg-[#05A847] transition-colors mb-3">
+          💬 LINE: @798aqusu
+        </a>
+        <p class="text-xs text-[#5A5248]">© 2025 香頌日和 All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar')
+    if (window.scrollY > 60) {
+      nav.style.background = 'rgba(255,255,255,0.98)'
+      nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)'
+    } else {
+      nav.style.background = 'rgba(255,255,255,0.85)'
+      nav.style.boxShadow = 'none'
+    }
+  })
+
+  // Contact form
+  function handleSubmit(e) {
+    e.preventDefault()
+    document.getElementById('contact-form').classList.add('hidden')
+    document.getElementById('success-msg').classList.remove('hidden')
+    window.open('https://line.me/R/ti/p/@798aqusu', '_blank')
+  }
+</script>
+</body>
+</html>
